@@ -1,47 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Мой Сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New vision</title>
     <style>
-        /* Стили для ссылки скачивания */
-        .excel-download {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .content {
+            max-width: 90%;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        p {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1.5rem;
             display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(to right, #1d976c, #93f9b9);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin: 25px 0;
-            transition: transform 0.3s;
         }
-        
-        .excel-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+
+        /* Лёгкая анимация появления */
+        h1, p {
+            animation: fadeIn 1.5s ease-out;
         }
-        
-        .excel-download:active {
-            transform: translateY(1px);
-        }
-        
-        .excel-download:before {
-            content: "📊 ";
-            font-size: 24px;
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <h1>Добро пожаловать на мой сайт!</h1>
-    
-    <a href="https://disk.yandex.ru/i/l45-rt3YAEGALQ?force_download=true" 
-       download="Финансовый_Отчет_2023.xlsx"
-       class="excel-download">
-        Скачать финансовый отчет (Excel)
-    </a>
-    
-    <p>Файл содержит актуальные данные за 2023 год.</p>
+    <div class="content">
+        <h1>New vision</h1>
+        <p>новый взгляд на строительные процессы</p>
+    </div>
 </body>
 </html>
